@@ -1,27 +1,20 @@
 <meta charset="utf-8">
 <script>
-    var answer1 = prompt("Зимой и летом одним цветом");
+    var questions = [
+        ['Зимой и летом одним цветом', 'елка'],
+        ['Сто одежек и все без застежек', 'капуста'],
+        ['Под соснами, под елками лежит мешок с иголками', 'ежик']
+    ];
 
-    if (answer1.toLowerCase() == "елка") {
-        alert("Правильный ответ")
-    } else {
-        alert("неправильный ответ")
-    }
-    var answer2 = prompt("Сто одежек и все без застежек");
+    for (var i=0; i<questions.length; i++) {
+        var q = questions[i][0],
+            a = questions[i][1];
+        var answer = prompt(q);
 
-    if (answer2 == "Капуста" || answer2 == "капуста" || answer2 == "КАПУСТА") {
-        alert("Правильный ответ")
-    }
-    else {
-        alert("неправильный ответ")
-    }
-
-    var answer3 = prompt("Под соснами, под елками лежит мешок с иголками");
-
-    if (answer3 == "Ежик" || answer3 == "ежик" || answer3 == "ЕЖИК") {
-        alert("Правильный ответ")
-    }
-    else {
-        alert("неправильный ответ")
+        if (answer.toLowerCase() == a) {
+            alert("Правильный ответ")
+        } else {
+            alert("Неправильный ответ")
+        }
     }
 </script>
